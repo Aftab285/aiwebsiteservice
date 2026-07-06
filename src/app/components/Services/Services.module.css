@@ -1,0 +1,195 @@
+/* ============================================
+   SERVICES SECTION STYLES
+   ============================================ */
+
+.services {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-hero); /* Keeps same gorgeous background as hero */
+  overflow: hidden;
+}
+
+/* Background overlay adjustments */
+.services__bg_overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  width: 100%;
+}
+
+/* Section Header */
+.services__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.services__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-800);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.services__title {
+  font-family: var(--font-primary);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--neutral-900);
+  margin-bottom: 20px;
+}
+
+.services__title_highlight {
+  color: var(--accent-600);
+}
+
+.services__subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--neutral-700);
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Filter Tabs */
+.services__tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.services__tab {
+  padding: 10px 24px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--neutral-600);
+  transition: all var(--transition-base);
+}
+
+.services__tab:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--neutral-800);
+}
+
+.services__tab_active {
+  background: #ffffff;
+  border-color: var(--neutral-300);
+  color: var(--neutral-900);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Services Grid */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Service Card */
+.services__card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.services__card:hover {
+  border-color: rgba(198, 142, 97, 0.3);
+  background: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), 0 0 30px rgba(198, 142, 97, 0.05);
+}
+
+.services__card_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(198, 142, 97, 0.1);
+  border: 1px solid rgba(198, 142, 97, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--accent-500);
+}
+
+.services__card_title {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-500);
+  margin-bottom: 12px;
+}
+
+.services__card_desc {
+  font-size: 0.9rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.services__card_link {
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-600);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition-fast);
+}
+
+.services__card_link:hover {
+  gap: 10px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .services__tabs {
+    gap: 8px;
+  }
+  
+  .services__tab {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

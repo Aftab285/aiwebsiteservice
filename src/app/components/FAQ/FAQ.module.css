@@ -1,0 +1,172 @@
+/* ============================================
+   FAQ SECTION STYLES
+   ============================================ */
+
+.faq {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-hero);
+  overflow: hidden;
+}
+
+/* Background overlay adjustments */
+.faq__bg_overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faq__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  width: 100%;
+}
+
+/* Section Header */
+.faq__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.faq__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--neutral-800);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.faq__title {
+  font-family: var(--font-primary);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--neutral-900);
+  margin-bottom: 20px;
+}
+
+.faq__title_highlight {
+  color: var(--accent-600);
+}
+
+.faq__subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--neutral-700);
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* FAQ Accordion List Layout */
+.accordion__list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* FAQ Accordion Item */
+.item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.item:hover {
+  background: #ffffff;
+  border-color: rgba(198, 142, 97, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Accordion Trigger Button */
+.trigger {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  cursor: pointer;
+  gap: 16px;
+  transition: color var(--transition-fast);
+}
+
+.trigger:hover {
+  color: var(--accent-600);
+}
+
+.icon {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.item_active .icon {
+  transform: rotate(45deg);
+  color: var(--accent-600);
+}
+
+/* Accordion Content Panel */
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-smooth);
+}
+
+.item_active .panel {
+  max-height: 500px; /* Big enough to fit the text */
+}
+
+.panel_content {
+  padding: 0 24px 24px 24px;
+  font-family: var(--font-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--neutral-600);
+}
+
+.panel_content strong {
+  color: var(--neutral-900);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .trigger {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+  
+  .panel_content {
+    padding: 0 20px 20px 20px;
+    font-size: 0.88rem;
+  }
+}

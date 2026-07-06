@@ -1,0 +1,105 @@
+/* ============================================
+   PORTFOLIO SECTION STYLES
+   ============================================ */
+
+.portfolio {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-section-dark);
+  overflow: hidden;
+}
+
+.portfolio__bg_overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.portfolio__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  width: 100%;
+}
+
+.carousel__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+  flex: 0 0 50%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.carousel__btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel__btn_prev {
+  left: -20px;
+}
+
+.carousel__btn_next {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .carousel__btn_prev {
+    left: 10px;
+  }
+  .carousel__btn_next {
+    right: 10px;
+  }
+}
+

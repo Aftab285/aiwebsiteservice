@@ -1,0 +1,142 @@
+/* ============================================
+   WHY CHOOSE ME SECTION STYLES
+   ============================================ */
+
+.whyChooseMe {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-hero); /* Keeps same background as Hero */
+  overflow: hidden;
+}
+
+/* Background overlay adjustments */
+.whyChooseMe__bg_overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% 10%, rgba(0, 0, 0, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.whyChooseMe__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  width: 100%;
+}
+
+/* Section Header */
+.whyChooseMe__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.whyChooseMe__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--neutral-800);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.whyChooseMe__title {
+  font-family: var(--font-primary);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--neutral-900);
+  margin-bottom: 20px;
+}
+
+.whyChooseMe__title_highlight {
+  color: var(--accent-600);
+}
+
+.whyChooseMe__subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--neutral-700);
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Features Grid */
+.whyChooseMe__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Feature Card */
+.whyChooseMe__card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  transition: all var(--transition-base);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.whyChooseMe__card:hover {
+  background: #ffffff;
+  border-color: rgba(198, 142, 97, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08), 0 0 30px rgba(198, 142, 97, 0.05);
+}
+
+.whyChooseMe__card_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(198, 142, 97, 0.1);
+  border: 1px solid rgba(198, 142, 97, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  color: var(--accent-600);
+}
+
+.whyChooseMe__card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.whyChooseMe__card_title {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.whyChooseMe__card_desc {
+  font-size: 0.88rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .whyChooseMe__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

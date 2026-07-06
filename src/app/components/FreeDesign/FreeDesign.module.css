@@ -1,0 +1,298 @@
+/* ============================================
+   FREE DESIGN OFFER & PROCESS STYLES
+   ============================================ */
+
+.freeDesign {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-section-dark); /* Flowing blue background */
+  overflow: hidden;
+}
+
+/* Background overlay adjustments */
+.freeDesign__bg_overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.freeDesign__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Section Header */
+.freeDesign__header {
+  text-align: center;
+}
+
+.freeDesign__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-400);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.freeDesign__title {
+  font-family: var(--font-primary);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--neutral-50);
+  margin-bottom: 20px;
+}
+
+.freeDesign__title_highlight {
+  background: linear-gradient(to right, var(--accent-400) 30%, var(--accent-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.freeDesign__subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--neutral-300);
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Process Timeline (1 to 6 steps)
+   ============================================ */
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.process__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+}
+
+.process__card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(198, 142, 97, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.process__number {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, rgba(198, 142, 97, 0.3) 0%, rgba(198, 142, 97, 0.05) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: absolute;
+  top: 24px;
+  right: 28px;
+}
+
+.process__card_title {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--neutral-50);
+  padding-right: 40px;
+}
+
+.process__card_desc {
+  font-size: 0.92rem;
+  color: var(--neutral-300);
+  line-height: 1.6;
+}
+
+/* ============================================
+   FREE Design Form / CTA Block
+   ============================================ */
+.offer__block {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-2xl);
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.offer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.offer__badge {
+  background: var(--gradient-cta);
+  color: var(--neutral-50);
+  padding: 6px 16px;
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.08em;
+}
+
+.offer__title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--neutral-50);
+}
+
+.offer__text {
+  font-size: 1rem;
+  color: var(--neutral-300);
+  line-height: 1.7;
+}
+
+.offer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.offer__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--neutral-300);
+  font-weight: 500;
+}
+
+.offer__item_check {
+  color: var(--success-400);
+  font-weight: bold;
+}
+
+/* WhatsApp CTA Card */
+.offer__whatsapp_card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.offer__whatsapp_title {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--neutral-50);
+}
+
+.offer__whatsapp_text {
+  font-size: 0.92rem;
+  color: var(--neutral-400);
+  line-height: 1.6;
+}
+
+.offer__whatsapp_button {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--gradient-whatsapp);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--neutral-50);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.offer__whatsapp_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+
+.offer__whatsapp_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer__whatsapp_footer {
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+  text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offer__block {
+    grid-template-columns: 1fr;
+    padding: 36px;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .process__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .offer__whatsapp_card {
+    padding: 24px;
+  }
+
+  .offer__whatsapp_button {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+}
