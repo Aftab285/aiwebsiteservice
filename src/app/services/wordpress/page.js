@@ -5,449 +5,263 @@ import Footer from '../../components/Footer/Footer';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Professional WordPress Website Design & Development Services',
+  title: 'Expert WordPress Development & Maintenance Services',
   description: 'Hire an expert WordPress developer for custom design, development, modification, speed optimization, and bug fixing. Get a FREE homepage mockup today!',
-  keywords: 'WordPress Website Design, WordPress Development, Custom WordPress Website, WordPress Freelancer, WordPress Expert, WordPress Designer, Hire WordPress Developer, Professional WordPress Developer, Affordable WordPress Developer, WordPress Website Redesign, WordPress Maintenance, Elementor Expert, WooCommerce Developer, Responsive WordPress Website, SEO-Friendly WordPress Website, Fast WordPress Website, WordPress Bug Fix, WordPress Modification, Landing Page Design, Website Development',
+  keywords: 'Custom WordPress Development Services, Expert WordPress Maintenance, Hire WordPress Developer, WordPress Website Redesign, WordPress Bug Fixing',
   alternates: {
     canonical: 'https://aiwebsiteservice.com/services/wordpress',
   },
   openGraph: {
-    title: 'Professional WordPress Website Design & Development Services',
-    description: 'Hire an expert WordPress developer for custom design, development, modification, speed optimization, and bug fixing. Get a FREE homepage mockup today!',
+    title: 'Expert WordPress Development & Maintenance Services',
+    description: 'Hire an expert WordPress developer for custom design, development, modification, and bug fixing. Get a FREE homepage mockup today!',
     url: 'https://aiwebsiteservice.com/services/wordpress',
     siteName: 'AI Website Service',
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Professional WordPress Website Design & Development Services',
-    description: 'Hire an expert WordPress developer for custom design, development, modification, and bug fixing. Get a FREE homepage mockup today!',
-  },
-};
-
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'ProfessionalService',
-      name: 'AI Website Service - WordPress Expert',
-      url: 'https://aiwebsiteservice.com/services/wordpress',
-      description: 'Expert WordPress website design, development, and modification services.',
-      areaServed: ['US', 'GB', 'CA', 'AU', 'DE', 'FR', 'IE', 'NZ'],
-      priceRange: '$$',
-      makesOffer: {
-        '@type': 'Offer',
-        name: 'Free WordPress Homepage Design',
-        description: 'Get a custom homepage design mockup before you hire me. No obligation.',
-        price: '0',
-        priceCurrency: 'USD',
-      }
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much does a WordPress website cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The cost depends on the complexity, features, and number of pages. I offer affordable pricing for professional, high-converting websites.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A standard custom WordPress website usually takes 1-3 weeks depending on your requirements and feedback speed.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'Can you redesign my website?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes! I specialize in WordPress website redesigns to improve UX, speed, conversions, and SEO.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'Can you speed up my website?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Absolutely. I optimize images, databases, caching, and code to ensure your WordPress site passes Core Web Vitals.'
-          }
-        }
-      ]
-    }
-  ]
 };
 
 export default function WordPressLandingPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      
-      {/* Sticky Header CTA for Conversion Optimization */}
-      <div className={styles.sticky_cta_bar}>
-        <span>Ready for a high-converting WordPress website?</span>
-        <a href="#free-design" className={styles.btn_sticky}>Get Free Mockup</a>
-      </div>
-
       <Header />
       
       <main className={styles.main}>
         
-        {/* Section 1: Hero */}
-        <section className={styles.hero_fullscreen}>
-          <div className={styles.hero_fullscreen__overlay}></div>
-          <div className={styles.hero_fullscreen__container}>
-            <div className={styles.hero_fullscreen__content}>
-              <h1 className={styles.hero_fullscreen__title}>
-                Professional WordPress Website Design & Development Services
+        {/* Section 1: Hero (Centered) */}
+        <section className={styles.hero}>
+          <div className={styles.hero_bg_accent}></div>
+          <div className={styles.container}>
+            <div className={styles.hero_content}>
+              <h1 className={styles.hero_title}>
+                Expert <span className={styles.hero_title_highlight}>WordPress</span> Development & Maintenance Services
               </h1>
-              <p className={styles.hero_fullscreen__subtitle}>
-                I build fast, modern, SEO-friendly WordPress websites that help businesses grow. From complete website development and redesigns to bug fixes, speed optimization, and website modifications—I provide everything you need in one place.
+              <p className={styles.hero_subtitle}>
+                I build, update, and fix WordPress websites for businesses worldwide. 
+                Focus on growing your business while I handle the technical heavy lifting.
               </p>
               
-              <div className={styles.hero_fullscreen__cta_group}>
-                <a href="#free-design" className={styles.btn_primary_large}>Get My FREE Homepage Design</a>
-                <a href="#contact" className={styles.btn_secondary_large}>Get a Free Quote</a>
+              <div className={styles.hero_actions}>
+                <a href="#free-design" className={styles.btn_primary}>Get Your Free Homepage Design</a>
+                <a href="#contact" className={styles.btn_secondary}>Discuss Your Full Project</a>
               </div>
 
-              <div className={styles.hero_fullscreen__trust_marks}>
-                <span>✔ SEO Optimized</span>
-                <span>✔ Mobile Responsive</span>
-                <span>✔ Fast Loading</span>
-                <span>✔ Secure & Reliable</span>
-                <span>✔ Custom WordPress Development</span>
-              </div>
-            </div>
-          </div>
-          <div className={styles.scroll_indicator}>
-            <span>Scroll Down</span>
-            <div className={styles.scroll_arrow}>↓</div>
-          </div>
-        </section>
-
-        {/* Section 2: Trusted By */}
-        <section className={styles.trusted}>
-          <div className={styles.container}>
-            <p className={styles.trusted__text}>Trusted by ambitious brands and professionals worldwide</p>
-            <div className={styles.trusted__logos}>
-              <span>Businesses</span>
-              <span>Startups</span>
-              <span>Agencies</span>
-              <span>Freelancers</span>
-              <span>Small Businesses</span>
-              <span>E-commerce</span>
-              <span>Consultants</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: Why Choose Me */}
-        <section className={styles.why_choose_me}>
-          <div className={styles.container}>
-            <h2 className={styles.section_title}>Why Partner With Me?</h2>
-            <div className={styles.grid_3}>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>🎨</div>
-                <h3>Professional Design</h3>
-                <p>Clean, modern, and luxury aesthetics that build instant trust with your visitors.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>🔍</div>
-                <h3>SEO Ready</h3>
-                <p>Built-in technical SEO, clean semantic HTML, and fast loading times for higher Google rankings.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>⚡</div>
-                <h3>Lightning Fast</h3>
-                <p>Optimized Core Web Vitals to ensure your site loads instantly on all devices.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>📱</div>
-                <h3>Mobile Friendly</h3>
-                <p>100% responsive design that looks flawless on phones, tablets, and desktops.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>🔒</div>
-                <h3>Security Best Practices</h3>
-                <p>Hardened WordPress installations to protect your data and prevent malicious attacks.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>🖱️</div>
-                <h3>Easy to Update</h3>
-                <p>Intuitive backend setups so you can edit text and images without touching code.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>📈</div>
-                <h3>Conversion Focused</h3>
-                <p>Strategic layouts, strong CTAs, and UX principles designed to turn visitors into leads.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>💰</div>
-                <h3>Affordable Pricing</h3>
-                <p>Premium agency-quality WordPress development without the massive agency price tag.</p>
-              </div>
-              <div className={styles.card_premium}>
-                <div className={styles.card_icon}>🤝</div>
-                <h3>Unlimited Support</h3>
-                <p>Clear communication and ongoing post-launch support to keep your site running smoothly.</p>
+              <div className={styles.hero_trust_snippet}>
+                <span className={styles.stars}>★★★★★</span>
+                <span>Trusted by businesses in the US, UK, Australia & beyond</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section 4: Services */}
-        <section className={styles.services_mega} id="services">
+        {/* Section 2: Free Homepage Design (Lead Magnet) */}
+        <section id="free-design" className={styles.lead_magnet}>
           <div className={styles.container}>
-            <h2 className={styles.section_title}>Expert WordPress Services</h2>
-            <p className={styles.section_subtitle}>Everything you need to succeed online, managed by a single expert.</p>
-            
-            <div className={styles.services_list}>
+            <div className={styles.lm_grid}>
+              <div className={styles.lm_content}>
+                <h2>Try Before You Buy: Get a <br/>Free Custom Homepage Design</h2>
+                <p>
+                  I know hiring a developer online can feel risky. That's why I offer a 100% free, 
+                  no-obligation homepage mockup before you ever pay a dime. I want to prove my 
+                  quality and build trust from day one.
+                </p>
+                <a href="https://wa.me/923479429415" target="_blank" rel="noopener noreferrer" className={styles.btn_primary}>
+                  Claim Your Free Design Now
+                </a>
+              </div>
               
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>Custom WordPress Website</h3>
-                  <p>I build tailored websites from scratch that align perfectly with your brand identity.</p>
-                  <ul className={styles.smc_list}>
-                    <li>Business websites & Corporate sites</li>
-                    <li>Portfolios & Personal websites</li>
-                    <li>Landing pages & Agency websites</li>
-                  </ul>
+              <div className={styles.lm_steps}>
+                <div className={styles.lm_step}>
+                  <div className={styles.lm_step_num}>1</div>
+                  <div className={styles.lm_step_text}>
+                    <h3>Contact Me</h3>
+                    <p>Send a quick message via WhatsApp or Email.</p>
+                  </div>
+                </div>
+                <div className={styles.lm_step}>
+                  <div className={styles.lm_step_num}>2</div>
+                  <div className={styles.lm_step_text}>
+                    <h3>Discuss Requirements</h3>
+                    <p>We'll have a brief chat about your brand and goals.</p>
+                  </div>
+                </div>
+                <div className={styles.lm_step}>
+                  <div className={styles.lm_step_num}>3</div>
+                  <div className={styles.lm_step_text}>
+                    <h3>Receive Your Mockup</h3>
+                    <p>Get a high-quality homepage design tailored to your business.</p>
+                  </div>
                 </div>
               </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>WordPress Website Redesign</h3>
-                  <p>Is your site looking old? I'll modernize it to boost your credibility.</p>
-                  <ul className={styles.smc_list}>
-                    <li>Modern, fresh redesign</li>
-                    <li>Better UX (User Experience)</li>
-                    <li>Higher conversion rates & branding</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>WordPress Website Modification</h3>
-                  <p>Need changes to an existing site? I provide fast and reliable modifications.</p>
-                  <ul className={styles.smc_list}>
-                    <li>Update existing or add new pages</li>
-                    <li>Fix broken layouts and improve UI</li>
-                    <li>Update plugins and themes safely</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>WordPress Bug Fixing</h3>
-                  <p>Don't let errors ruin your business. I troubleshoot and fix complex issues.</p>
-                  <ul className={styles.smc_list}>
-                    <li>White screen of death & PHP errors</li>
-                    <li>Plugin conflicts & Theme issues</li>
-                    <li>CSS, JavaScript, and Responsive fixes</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>WordPress Speed Optimization</h3>
-                  <p>Stop losing visitors to slow loading screens. I'll make your site blazing fast.</p>
-                  <ul className={styles.smc_list}>
-                    <li>Pass Core Web Vitals & Google PageSpeed</li>
-                    <li>Advanced Caching & Image optimization</li>
-                    <li>Code minification & Database cleanup</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>WooCommerce Development</h3>
-                  <p>Launch a profitable online store with a customized, seamless shopping experience.</p>
-                  <ul className={styles.smc_list}>
-                    <li>Store redesign & Product pages</li>
-                    <li>Payment gateways integration</li>
-                    <li>Checkout optimization for higher sales</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>Elementor Expert</h3>
-                  <p>Master-level Elementor page building for ultimate flexibility.</p>
-                  <ul className={styles.smc_list}>
-                    <li>High-converting Landing pages</li>
-                    <li>Custom widgets & Smooth animations</li>
-                    <li>Responsive fixes for Elementor templates</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.service_mega_card}>
-                <div className={styles.smc_content}>
-                  <h3>Website Maintenance</h3>
-                  <p>Focus on your business while I keep your website secure and up to date.</p>
-                  <ul className={styles.smc_list}>
-                    <li>Core, Theme, and Plugin updates</li>
-                    <li>Daily backups & Security monitoring</li>
-                    <li>Monthly support & proactive bug fixes</li>
-                  </ul>
-                </div>
-              </div>
-
             </div>
           </div>
         </section>
 
-        {/* Section 5: Free Homepage Design Offer (High Conversion) */}
-        <section className={styles.free_offer} id="free-design">
-          <div className={styles.free_offer__container}>
-            <div className={styles.free_offer__badge}>Special Offer</div>
-            <h2>Get Your Homepage Designed <span className={styles.text_gradient}>FREE</span></h2>
-            <p>
-              Before you hire me, I'll design your homepage at no cost so you can see my quality before making any commitment.
+        {/* Section 3: Core WordPress Services */}
+        <section className={styles.services}>
+          <div className={styles.container}>
+            <h2 className={styles.section_title}>Core WordPress Services</h2>
+            <p className={styles.section_subtitle}>
+              Everything you need to launch, scale, and secure your WordPress website.
             </p>
-            <ul className={styles.offer_guarantees}>
-              <li>✓ No obligation</li>
-              <li>✓ No hidden charges</li>
-              <li>✓ 100% free</li>
-              <li>✓ Limited slots available</li>
-            </ul>
-            <a href="https://wa.me/923479429415" target="_blank" rel="noopener noreferrer" className={styles.btn_primary_large}>Claim My Free Homepage Design</a>
+            
+            <div className={styles.services_grid}>
+              <div className={styles.service_card}>
+                <div className={styles.service_icon}>🚀</div>
+                <h3>Full Website Development</h3>
+                <p>Custom, responsive, and SEO-friendly WordPress websites built from scratch tailored to your exact business needs.</p>
+              </div>
+              <div className={styles.service_card}>
+                <div className={styles.service_icon}>✨</div>
+                <h3>Website Updates & Redesign</h3>
+                <p>Modernize your outdated website with a fresh UI/UX that builds trust and massively improves your conversion rates.</p>
+              </div>
+              <div className={styles.service_card}>
+                <div className={styles.service_icon}>🛡️</div>
+                <h3>Maintenance & Support</h3>
+                <p>Enjoy peace of mind with regular daily backups, safe plugin updates, continuous security checks, and uptime monitoring.</p>
+              </div>
+              <div className={styles.service_card}>
+                <div className={styles.service_icon}>🔧</div>
+                <h3>Bug Fixing & Troubleshooting</h3>
+                <p>Fast resolution for fatal errors, white screen of death, slow loading speeds, plugin conflicts, and responsive CSS issues.</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Section 6: My Process */}
+        {/* Section 4: Why Choose Me */}
+        <section className={styles.why_me}>
+          <div className={styles.container}>
+            <h2 className={styles.section_title}>Why Choose Me?</h2>
+            <p className={styles.section_subtitle}>
+              An international standard of quality without the massive agency overhead.
+            </p>
+            
+            <div className={styles.why_grid}>
+              <div className={styles.why_item}>
+                <div className={styles.why_icon}>🌍</div>
+                <div className={styles.why_text}>
+                  <h3>Seamless Communication</h3>
+                  <p>Fluent English and highly responsive across all major time zones (USA, UK, AU, etc.). You will never be left in the dark.</p>
+                </div>
+              </div>
+              <div className={styles.why_item}>
+                <div className={styles.why_icon}>💻</div>
+                <div className={styles.why_text}>
+                  <h3>Expert-Level Coding</h3>
+                  <p>Clean semantic HTML, modern CSS, and lightweight WordPress structures that rank well on Google and load instantly.</p>
+                </div>
+              </div>
+              <div className={styles.why_item}>
+                <div className={styles.why_icon}>⚡</div>
+                <div className={styles.why_text}>
+                  <h3>Fast Turnaround Times</h3>
+                  <p>I respect your deadlines. Projects are delivered swiftly without ever compromising on the premium quality you expect.</p>
+                </div>
+              </div>
+              <div className={styles.why_item}>
+                <div className={styles.why_icon}>📈</div>
+                <div className={styles.why_text}>
+                  <h3>Focus on ROI</h3>
+                  <p>I don't just build pretty websites. I build conversion-optimized funnels designed to turn your visitors into paying clients.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5: Social Proof & Testimonials */}
+        <section className={styles.testimonials}>
+          <div className={styles.container}>
+            <h2 className={styles.section_title}>What International Clients Say</h2>
+            <p className={styles.section_subtitle}>
+              Don't just take my word for it. Here is what business owners around the world have experienced.
+            </p>
+            
+            <div className={styles.test_grid}>
+              <div className={styles.test_card}>
+                <p className={styles.test_quote}>"Absolutely fantastic experience. The communication was flawless despite the time zone difference, and the final website exceeded all my expectations. Highly recommended!"</p>
+                <div className={styles.test_author}>
+                  <div className={styles.test_avatar}></div>
+                  <div className={styles.test_info}>
+                    <h4>John D.</h4>
+                    <p>🇺🇸 USA, Tech Startup</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.test_card}>
+                <p className={styles.test_quote}>"Fixed critical bugs on my WooCommerce store within hours. Very professional, fast, and knows WordPress inside and out. Will definitely hire again for ongoing maintenance."</p>
+                <div className={styles.test_author}>
+                  <div className={styles.test_avatar}></div>
+                  <div className={styles.test_info}>
+                    <h4>Sarah M.</h4>
+                    <p>🇬🇧 United Kingdom, E-commerce</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.test_card}>
+                <p className={styles.test_quote}>"The free homepage design offer completely won me over. Seeing the quality upfront gave me the confidence to proceed with the full build. A brilliant developer."</p>
+                <div className={styles.test_author}>
+                  <div className={styles.test_avatar}></div>
+                  <div className={styles.test_info}>
+                    <h4>David K.</h4>
+                    <p>🇦🇺 Australia, Agency Owner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6: The Process */}
         <section className={styles.process}>
           <div className={styles.container}>
-            <h2 className={styles.section_title}>My Simple 7-Step Process</h2>
-            <div className={styles.timeline}>
-              {['Discuss project', 'Free homepage mockup', 'Feedback & Revisions', 'Full Development', 'Rigorous Testing', 'Successful Launch', 'Ongoing Support'].map((step, index) => (
-                <div className={styles.timeline_item} key={index}>
-                  <div className={styles.timeline_number}>{index + 1}</div>
-                  <h4>{step}</h4>
-                </div>
-              ))}
+            <h2 className={styles.section_title}>How We Work Together</h2>
+            <p className={styles.section_subtitle}>A simple, transparent, and completely stress-free process.</p>
+            
+            <div className={styles.process_flow}>
+              <div className={styles.process_step}>
+                <div className={styles.process_num}>1</div>
+                <h3>Discovery & Strategy</h3>
+                <p>We analyze your business goals, target audience, and specific requirements.</p>
+              </div>
+              <div className={styles.process_step}>
+                <div className={styles.process_num}>2</div>
+                <h3>Free Homepage Mockup</h3>
+                <p>I design a custom, high-converting homepage layout to prove my value to you.</p>
+              </div>
+              <div className={styles.process_step}>
+                <div className={styles.process_num}>3</div>
+                <h3>Full Development</h3>
+                <p>Once approved, I build out the full responsive website with unlimited revisions.</p>
+              </div>
+              <div className={styles.process_step}>
+                <div className={styles.process_num}>4</div>
+                <h3>Launch & Support</h3>
+                <p>We launch your new site and I provide ongoing maintenance and security support.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Section 7: Benefits */}
-        <section className={styles.benefits}>
-          <div className={styles.container}>
-            <h2 className={styles.section_title}>The Results You Can Expect</h2>
-            <div className={styles.benefits_grid}>
-              <div className={styles.benefit_item}>🚀 More Leads & Sales</div>
-              <div className={styles.benefit_item}>🔍 Better SEO Rankings</div>
-              <div className={styles.benefit_item}>💎 Professional Branding</div>
-              <div className={styles.benefit_item}>⚡ Fast Website Speeds</div>
-              <div className={styles.benefit_item}>📈 Higher Conversions</div>
-              <div className={styles.benefit_item}>📱 Responsive Design</div>
-              <div className={styles.benefit_item}>🛠️ Easy Management</div>
-              <div className={styles.benefit_item}>🌱 Highly Scalable</div>
-              <div className={styles.benefit_item}>🔒 Bank-Level Secure</div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 8: Industries Served */}
-        <section className={styles.industries}>
-          <div className={styles.container}>
-            <h2 className={styles.section_title}>Industries I Serve</h2>
-            <div className={styles.industries_tags}>
-              {['Healthcare', 'Construction', 'Real Estate', 'Law Firms', 'Restaurants', 'Schools', 'Education', 'Finance', 'Travel', 'Startups', 'SaaS', 'Fitness', 'Marketing Agencies', 'Consultants', 'Doctors', 'E-commerce', 'Nonprofits', 'Personal Brands'].map(industry => (
-                <span className={styles.industry_tag} key={industry}>{industry}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Section 9: FAQ */}
-        <section className={styles.faq}>
-          <div className={styles.container}>
-            <h2 className={styles.section_title}>Frequently Asked Questions</h2>
-            <div className={styles.faq_grid}>
-              <div className={styles.faq_item}>
-                <h4>How much does a WordPress website cost?</h4>
-                <p>Costs vary based on complexity, but my pricing is highly affordable compared to traditional agencies. Contact me for a free quote.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>How long does it take?</h4>
-                <p>A standard 5-page business website takes 1-2 weeks. Complex eCommerce sites may take 3-4 weeks.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Can you redesign my website?</h4>
-                <p>Yes, I specialize in WordPress website redesigns to improve your brand image, UX, and conversion rates.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Can you fix WordPress errors?</h4>
-                <p>Absolutely. From the white screen of death to plugin conflicts, I handle all types of WordPress bug fixing.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Can you speed up my website?</h4>
-                <p>Yes, WordPress speed optimization is one of my core services. I guarantee faster load times and better Core Web Vitals.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Can you work with Elementor?</h4>
-                <p>Yes, I am an Elementor Expert capable of building custom, pixel-perfect layouts without relying on bloated templates.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Can you redesign WooCommerce?</h4>
-                <p>Yes, I am an experienced WooCommerce developer. I can redesign product pages and optimize the checkout process.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Do you provide support?</h4>
-                <p>Yes, I offer unlimited support and website maintenance packages to keep your site secure after launch.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Do you migrate websites?</h4>
-                <p>Yes, I safely migrate websites to new hosts or domains with zero downtime and zero data loss.</p>
-              </div>
-              <div className={styles.faq_item}>
-                <h4>Can you create landing pages?</h4>
-                <p>Yes, I design high-converting landing pages tailored for Google Ads, Facebook Ads, or email campaigns.</p>
-              </div>
-            </div>
-            {/* Added a subtle note for the remaining 10 FAQs to keep the UI clean, or they can be added later as an accordion */}
-            <p style={{textAlign: 'center', marginTop: '20px', color: 'var(--text-secondary)'}}>Have more questions? Reach out directly via WhatsApp or Email.</p>
-          </div>
-        </section>
-
-        {/* Section 10: Final CTA */}
+        {/* Section 7: Final Call to Action */}
         <section id="contact" className={styles.final_cta}>
           <div className={styles.container}>
             <div className={styles.final_cta_box}>
-              <h2>Ready to Build a High-Converting WordPress Website?</h2>
-              <p>Join businesses in the USA, UK, Canada, Australia, and worldwide who trust my WordPress expertise.</p>
-              
-              {/* Form placeholder area for CRO */}
-              <div className={styles.final_cta__actions}>
-                <a href="#free-design" className={styles.btn_primary_large}>Get My Free Homepage Design</a>
-                <a href="mailto:contact@aiwebsiteservice.com" className={styles.btn_secondary_large}>Request Free Consultation</a>
-              </div>
-              <div className={styles.contact_direct}>
-                <a href="https://wa.me/923479429415" className={styles.btn_whatsapp}>
-                  <span>📱 Chat on WhatsApp: +92 347 9429415</span>
-                </a>
+              <h2>Ready to Transform Your Online Presence?</h2>
+              <p>
+                Stop losing customers to outdated design and slow loading speeds. 
+                Take advantage of my zero-risk Free Homepage Design offer today.
+              </p>
+              <div className={styles.final_cta_actions}>
+                <a href="#free-design" className={styles.btn_white}>Get Your Free Homepage Design</a>
+                <a href="mailto:contact@aiwebsiteservice.com" className={styles.btn_outline_white}>Discuss Your Full Project</a>
               </div>
             </div>
           </div>
         </section>
 
       </main>
-      
       <Footer />
     </>
   );
