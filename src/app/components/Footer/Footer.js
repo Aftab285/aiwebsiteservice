@@ -28,12 +28,20 @@ export default function Footer() {
   const bottomLinks = [
     { label: 'Home', href: '/#hero' },
     { label: 'Services', href: '/#services' },
+    { label: 'WordPress Website Design', href: '/services/wordpress' },
+    { label: 'WordPress Development', href: '/services/wordpress' },
+    { label: 'Website Modification', href: '/services/wordpress' },
+    { label: 'Website Maintenance', href: '/services/wordpress' },
+    { label: 'Website Redesign', href: '/services/wordpress' },
+    { label: 'Speed Optimization', href: '/services/wordpress' },
+    { label: 'Elementor', href: '/services/wordpress' },
+    { label: 'WooCommerce', href: '/services/wordpress' },
+    { label: 'Bug Fixing', href: '/services/wordpress' },
+    { label: 'Landing Pages', href: '/services/wordpress' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Process', href: '/#process' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Other Services', href: '#' },
-    { label: 'WordPress Services', href: '/services/wordpress' },
   ];
 
   return (
