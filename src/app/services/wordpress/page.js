@@ -2,7 +2,44 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import FaqAccordion from './FaqAccordion';
 import styles from './page.module.css';
+
+const faqData = [
+  {
+    question: 'Why should I hire a WordPress developer instead of doing it myself?',
+    answer: 'While WordPress is user-friendly, building a fast, secure, and highly-converting website requires deep technical knowledge. A professional WordPress developer ensures your site follows best practices for SEO, loads instantly, and provides a flawless user experience, saving you hundreds of hours.'
+  },
+  {
+    question: 'How much does it cost to hire a WordPress expert?',
+    answer: 'The cost depends entirely on your project requirements. A simple redesign might be a few hundred dollars, while a complex WooCommerce platform will be more. However, as a freelance WordPress expert, my overhead is low, meaning you get agency-level quality at a much more affordable rate.'
+  },
+  {
+    question: 'Do you offer ongoing WordPress maintenance?',
+    answer: 'Yes! After your website is launched, I offer comprehensive WordPress maintenance packages. This includes daily backups, security monitoring, plugin updates, and priority bug fixing to ensure your site never goes down.'
+  },
+  {
+    question: 'Can you fix my slow-loading WordPress site?',
+    answer: 'Absolutely. Speed optimization is one of my core WordPress services. I will analyze your Core Web Vitals, implement advanced caching, optimize images, and clean up bloated code to guarantee lightning-fast load times.'
+  },
+  {
+    question: 'Do you work with clients internationally?',
+    answer: 'Yes, I work with clients all over the world, primarily in the USA, UK, Canada, and Australia. I maintain flexible working hours to ensure seamless communication regardless of your time zone.'
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 
 export const metadata = {
   title: 'Expert WordPress Development & Maintenance Services',
@@ -72,6 +109,12 @@ const ChartIcon = ({ size = 36 }) => (
 export default function WordPressLandingPage() {
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      </Head>
       <Header />
       
       <main className={styles.main}>
@@ -259,6 +302,92 @@ export default function WordPressLandingPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Section: Freelance WordPress Expert vs. Agency */}
+        <section className={styles.expert_vs_agency}>
+          <div className={styles.container}>
+            <h2 className={styles.section_title}>Why Hire a Freelance WordPress Expert?</h2>
+            <p className={styles.section_subtitle}>
+              Skip the massive agency overhead and get direct access to premium WordPress development.
+            </p>
+            
+            <div className={styles.eva_grid}>
+              <div className={styles.eva_card}>
+                <h3>Typical Web Agency</h3>
+                <ul className={styles.eva_list}>
+                  <li><span className={styles.eva_icon_cross}>✖</span> High costs due to office overhead and managers.</li>
+                  <li><span className={styles.eva_icon_cross}>✖</span> You talk to a project manager, not the developer.</li>
+                  <li><span className={styles.eva_icon_cross}>✖</span> Slow response times and bureaucratic processes.</li>
+                  <li><span className={styles.eva_icon_cross}>✖</span> Your project might be handed off to junior devs.</li>
+                </ul>
+              </div>
+              <div className={`${styles.eva_card} ${styles.eva_freelance}`}>
+                <div className={styles.eva_badge}>Your Best Choice</div>
+                <h3>My Freelance Service</h3>
+                <ul className={styles.eva_list}>
+                  <li><span className={styles.eva_icon_check}>✔</span> Cost-effective pricing for premium quality.</li>
+                  <li><span className={styles.eva_icon_check}>✔</span> Direct 1-on-1 communication with your developer.</li>
+                  <li><span className={styles.eva_icon_check}>✔</span> Fast, agile turnaround times with zero red tape.</li>
+                  <li><span className={styles.eva_icon_check}>✔</span> 100% of the work is done by a senior WordPress expert.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section: WordPress Tech Stack & Capabilities */}
+        <section className={styles.tech_stack}>
+          <div className={styles.container}>
+            <h2 className={styles.section_title}>Advanced WordPress Capabilities</h2>
+            <p className={styles.section_subtitle}>
+              From custom themes to complex e-commerce integrations, I use the industry's best tools to build your site.
+            </p>
+            
+            <div className={styles.tech_grid}>
+              <div className={styles.tech_card}>
+                <div className={styles.tech_icon}>🎨</div>
+                <h3>Elementor Pro Mastery</h3>
+                <p>Pixel-perfect, highly responsive layouts built with the world's leading page builder.</p>
+              </div>
+              <div className={styles.tech_card}>
+                <div className={styles.tech_icon}>🛒</div>
+                <h3>WooCommerce</h3>
+                <p>Robust online stores optimized for high conversion rates and seamless checkouts.</p>
+              </div>
+              <div className={styles.tech_card}>
+                <div className={styles.tech_icon}>⚡</div>
+                <h3>Speed Optimization</h3>
+                <p>Passing Google Core Web Vitals with advanced caching and code minification.</p>
+              </div>
+              <div className={styles.tech_card}>
+                <div className={styles.tech_icon}>🛠️</div>
+                <h3>Advanced Custom Fields (ACF)</h3>
+                <p>Creating highly dynamic, easily manageable backend data structures for your team.</p>
+              </div>
+              <div className={styles.tech_card}>
+                <div className={styles.tech_icon}>🔒</div>
+                <h3>Ironclad Security</h3>
+                <p>Hardening your WordPress installation against malware, brute force, and exploits.</p>
+              </div>
+              <div className={styles.tech_card}>
+                <div className={styles.tech_icon}>🔍</div>
+                <h3>Technical SEO</h3>
+                <p>Schema markup, proper semantic HTML, and clean architecture that Google loves.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section: SEO FAQ */}
+        <section className={styles.faq}>
+          <div className={styles.container}>
+            <h2 className={styles.section_title}>Frequently Asked Questions</h2>
+            <p className={styles.section_subtitle}>
+              Everything you need to know about hiring a WordPress developer.
+            </p>
+            <FaqAccordion faqs={faqData} />
           </div>
         </section>
 
