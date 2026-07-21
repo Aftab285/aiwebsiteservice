@@ -20,6 +20,55 @@ export const metadata = {
   },
 };
 
+// Custom SVG Icons
+const CodeIcon = ({ size = 32 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+);
+
+const DesignIcon = ({ size = 32 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle>
+  </svg>
+);
+
+const ShieldIcon = ({ size = 32 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+  </svg>
+);
+
+const WrenchIcon = ({ size = 32 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+  </svg>
+);
+
+const GlobeIcon = ({ size = 36 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+  </svg>
+);
+
+const LaptopIcon = ({ size = 36 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+  </svg>
+);
+
+const LightningIcon = ({ size = 36 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+  </svg>
+);
+
+const ChartIcon = ({ size = 36 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+  </svg>
+);
+
 export default function WordPressLandingPage() {
   return (
     <>
@@ -106,22 +155,22 @@ export default function WordPressLandingPage() {
             
             <div className={styles.services_grid}>
               <div className={styles.service_card}>
-                <div className={styles.service_icon}>🚀</div>
+                <div className={styles.service_icon}><CodeIcon /></div>
                 <h3>Full Website Development</h3>
                 <p>Custom, responsive, and SEO-friendly WordPress websites built from scratch tailored to your exact business needs.</p>
               </div>
               <div className={styles.service_card}>
-                <div className={styles.service_icon}>✨</div>
+                <div className={styles.service_icon}><DesignIcon /></div>
                 <h3>Website Updates & Redesign</h3>
                 <p>Modernize your outdated website with a fresh UI/UX that builds trust and massively improves your conversion rates.</p>
               </div>
               <div className={styles.service_card}>
-                <div className={styles.service_icon}>🛡️</div>
+                <div className={styles.service_icon}><ShieldIcon /></div>
                 <h3>Maintenance & Support</h3>
                 <p>Enjoy peace of mind with regular daily backups, safe plugin updates, continuous security checks, and uptime monitoring.</p>
               </div>
               <div className={styles.service_card}>
-                <div className={styles.service_icon}>🔧</div>
+                <div className={styles.service_icon}><WrenchIcon /></div>
                 <h3>Bug Fixing & Troubleshooting</h3>
                 <p>Fast resolution for fatal errors, white screen of death, slow loading speeds, plugin conflicts, and responsive CSS issues.</p>
               </div>
@@ -139,28 +188,28 @@ export default function WordPressLandingPage() {
             
             <div className={styles.why_grid}>
               <div className={styles.why_item}>
-                <div className={styles.why_icon}>🌍</div>
+                <div className={styles.why_icon} style={{ color: '#2563eb' }}><GlobeIcon /></div>
                 <div className={styles.why_text}>
                   <h3>Seamless Communication</h3>
                   <p>Fluent English and highly responsive across all major time zones (USA, UK, AU, etc.). You will never be left in the dark.</p>
                 </div>
               </div>
               <div className={styles.why_item}>
-                <div className={styles.why_icon}>💻</div>
+                <div className={styles.why_icon} style={{ color: '#2563eb' }}><LaptopIcon /></div>
                 <div className={styles.why_text}>
                   <h3>Expert-Level Coding</h3>
                   <p>Clean semantic HTML, modern CSS, and lightweight WordPress structures that rank well on Google and load instantly.</p>
                 </div>
               </div>
               <div className={styles.why_item}>
-                <div className={styles.why_icon}>⚡</div>
+                <div className={styles.why_icon} style={{ color: '#2563eb' }}><LightningIcon /></div>
                 <div className={styles.why_text}>
                   <h3>Fast Turnaround Times</h3>
                   <p>I respect your deadlines. Projects are delivered swiftly without ever compromising on the premium quality you expect.</p>
                 </div>
               </div>
               <div className={styles.why_item}>
-                <div className={styles.why_icon}>📈</div>
+                <div className={styles.why_icon} style={{ color: '#2563eb' }}><ChartIcon /></div>
                 <div className={styles.why_text}>
                   <h3>Focus on ROI</h3>
                   <p>I don't just build pretty websites. I build conversion-optimized funnels designed to turn your visitors into paying clients.</p>
