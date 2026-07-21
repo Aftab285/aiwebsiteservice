@@ -102,45 +102,34 @@ export default function WordPressLandingPage() {
       <main className={styles.main}>
         
         {/* Section 1: Hero */}
-        <section className={styles.hero}>
-          <div className={styles.hero__container}>
-            <div className={styles.hero__content}>
-              <span className={styles.hero__badge}>Top-Rated WordPress Expert</span>
-              <h1 className={styles.hero__title}>
-                Professional WordPress Website Design & Development Services That Grow Your Business
+        <section className={styles.hero_fullscreen}>
+          <div className={styles.hero_fullscreen__overlay}></div>
+          <div className={styles.hero_fullscreen__container}>
+            <div className={styles.hero_fullscreen__content}>
+              <h1 className={styles.hero_fullscreen__title}>
+                Professional WordPress Website Design & Development Services
               </h1>
-              <p className={styles.hero__subtitle}>
-                Need a high-converting WordPress website? I build modern, responsive, SEO-friendly WordPress websites for businesses worldwide.
+              <p className={styles.hero_fullscreen__subtitle}>
+                I build fast, modern, SEO-friendly WordPress websites that help businesses grow. From complete website development and redesigns to bug fixes, speed optimization, and website modifications—I provide everything you need in one place.
               </p>
               
-              <div className={styles.hero__trust_marks}>
-                <span>✓ Responsive Websites</span>
-                <span>✓ SEO Optimized</span>
-                <span>✓ Fast Loading</span>
-                <span>✓ Secure</span>
-                <span>✓ Easy to Manage</span>
+              <div className={styles.hero_fullscreen__cta_group}>
+                <a href="#free-design" className={styles.btn_primary_large}>Get My FREE Homepage Design</a>
+                <a href="#contact" className={styles.btn_secondary_large}>Get a Free Quote</a>
               </div>
 
-              <div className={styles.hero__cta_group}>
-                <a href="#free-design" className={styles.btn_primary_large}>Get Free Homepage Design</a>
-                <a href="#contact" className={styles.btn_secondary_large}>Get Free Quote</a>
+              <div className={styles.hero_fullscreen__trust_marks}>
+                <span>✔ SEO Optimized</span>
+                <span>✔ Mobile Responsive</span>
+                <span>✔ Fast Loading</span>
+                <span>✔ Secure & Reliable</span>
+                <span>✔ Custom WordPress Development</span>
               </div>
             </div>
-            
-            <div className={styles.hero__visual}>
-              <div className={styles.hero__mockup_container}>
-                <div className={styles.mockup_glow}></div>
-                <img src="/images/hero-mockup.webp" alt="Modern WordPress Website UI Mockup" className={styles.hero__image} />
-                <div className={styles.placeholder_mockup} style={{display: 'none'}}>
-                  <div className={styles.mockup_header}>
-                    <span className={styles.dot}></span><span className={styles.dot}></span><span className={styles.dot}></span>
-                  </div>
-                  <div className={styles.mockup_body}>
-                    <h3>Premium Web Design</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div className={styles.scroll_indicator}>
+            <span>Scroll Down</span>
+            <div className={styles.scroll_arrow}>↓</div>
           </div>
         </section>
 
