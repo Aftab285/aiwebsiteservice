@@ -28,12 +28,12 @@ export default function Footer() {
   const bottomLinks = [
     { label: 'Home', href: '/#hero' },
     { label: 'Services', href: '/#services' },
-    { label: 'Other Services', href: '#' },
-    { label: 'WordPress Services', href: '/services/wordpress' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Process', href: '/#process' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Blog', href: '/blog' },
+    { label: 'Other Services', href: '#' },
+    { label: 'WordPress Services', href: '/services/wordpress' },
   ];
 
   return (

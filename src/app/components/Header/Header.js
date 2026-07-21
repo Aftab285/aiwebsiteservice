@@ -35,6 +35,9 @@ export default function Header() {
   const navLinks = [
     { label: 'Home', href: '/#hero' },
     { label: 'Services', href: '/#services' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'FAQ', href: '/#faq' },
+    { label: 'Blog', href: '/blog' },
     { 
       label: 'Other Services', 
       dropdown: true,
@@ -42,9 +45,6 @@ export default function Header() {
         { label: 'WordPress Services', href: '/services/wordpress' }
       ]
     },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'FAQ', href: '/#faq' },
-    { label: 'Blog', href: '/blog' },
   ];
 
   return (
