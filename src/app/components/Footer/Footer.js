@@ -22,7 +22,7 @@ const MailIcon = ({ size = 18 }) => (
   </svg>
 );
 
-export default function Footer() {
+export default function Footer({ hideCtaBlock = false }) {
   const currentYear = new Date().getFullYear();
 
   const bottomLinks = [
@@ -50,48 +50,50 @@ export default function Footer() {
 
       <div className={styles.footer__container}>
         {/* Large Final CTA Block */}
-        <div className={styles.cta_block}>
-          <h2 className={styles.cta_title}>Let&apos;s Build Your Dream Website.</h2>
-          <p className={styles.cta_text}>
-            Get in touch to secure your FREE custom homepage mockup. No credit card required. No commitment. Just direct, premium design concepts.
-          </p>
-          
-          <div className={styles.cta_buttons}>
-            <a 
-              href="#free-design" 
-              className={`${styles.cta_btn} ${styles.cta_btn_primary}`}
-            >
-              Get Free Website Design
-            </a>
-            <a 
-              href="https://wa.me/923479429415" 
-              className={`${styles.cta_btn} ${styles.cta_btn_whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp"
-            >
-              <span style={{ display: 'flex', alignItems: 'center' }}>
-                <WhatsAppIcon size={26} />
-              </span>
-              <span>Chat on WhatsApp</span>
-            </a>
-          </div>
+        {!hideCtaBlock && (
+          <div className={styles.cta_block}>
+            <h2 className={styles.cta_title}>Let&apos;s Build Your Dream Website.</h2>
+            <p className={styles.cta_text}>
+              Get in touch to secure your FREE custom homepage mockup. No credit card required. No commitment. Just direct, premium design concepts.
+            </p>
+            
+            <div className={styles.cta_buttons}>
+              <a 
+                href="#free-design" 
+                className={`${styles.cta_btn} ${styles.cta_btn_primary}`}
+              >
+                Get Free Website Design
+              </a>
+              <a 
+                href="https://wa.me/923479429415" 
+                className={`${styles.cta_btn} ${styles.cta_btn_whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+              >
+                <span style={{ display: 'flex', alignItems: 'center' }}>
+                  <WhatsAppIcon size={26} />
+                </span>
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
 
-          <div className={styles.cta_contacts}>
-            <div className={styles.contact_item}>
-              <span className={styles.contact_icon} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <MailIcon size={18} />
-              </span>
-              <span>Email: <a href="mailto:contact@aiwebsiteservice.com" className={styles.contact_link}>contact@aiwebsiteservice.com</a></span>
-            </div>
-            <div className={styles.contact_item}>
-              <span className={styles.contact_icon} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <WhatsAppIcon size={18} />
-              </span>
-              <span>WhatsApp: <a href="https://wa.me/923479429415" className={styles.contact_link}>+92 347 9429415</a></span>
+            <div className={styles.cta_contacts}>
+              <div className={styles.contact_item}>
+                <span className={styles.contact_icon} style={{ display: 'inline-flex', alignItems: 'center' }}>
+                  <MailIcon size={18} />
+                </span>
+                <span>Email: <a href="mailto:contact@aiwebsiteservice.com" className={styles.contact_link}>contact@aiwebsiteservice.com</a></span>
+              </div>
+              <div className={styles.contact_item}>
+                <span className={styles.contact_icon} style={{ display: 'inline-flex', alignItems: 'center' }}>
+                  <WhatsAppIcon size={18} />
+                </span>
+                <span>WhatsApp: <a href="https://wa.me/923479429415" className={styles.contact_link}>+92 347 9429415</a></span>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Middle Brand & Links Row */}
         <div className={styles.middle_bar}>

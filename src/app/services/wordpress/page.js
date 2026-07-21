@@ -262,7 +262,7 @@ export default function WordPressLandingPage() {
         </section>
 
       </main>
-      <Footer />
+      <Footer hideCtaBlock={true} />
     </>
   );
 }
