@@ -261,7 +261,7 @@
 }
 
 .header__dropdown_link {
-  color: var(--text-secondary);
+  color: #ffffff;
   text-decoration: none;
   padding: 10px 20px;
   font-size: 0.95rem;
@@ -320,7 +320,7 @@
 }
 
 .mobile_drawer__dropdown_link {
-  color: var(--text-secondary);
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.1rem;
   padding: 12px 20px;
